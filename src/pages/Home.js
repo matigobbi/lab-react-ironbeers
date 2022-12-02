@@ -10,7 +10,7 @@ export default function Home() {
       <Link to="/random"> Random Beer </Link>
     </li>
     <li className="link3">
-      <Link to="/about"> About </Link>
+      <Link to="/about"> New Beer </Link>
     </li>
   </ul>
     

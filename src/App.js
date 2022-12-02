@@ -2,11 +2,11 @@ import './App.css';
 import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import ProductDetails from "./ProductDetails"
-import About from "./About";
-import AllBeers from "./AllBeers";
-import Home from "./Home";
-import RandomBeer from './RandomBeer';
+import ProductDetails from "./pages/ProductDetails"
+import About from "./pages/About";
+import AllBeers from "./pages/AllBeers";
+import Home from "./pages/Home";
+import RandomBeer from './pages/RandomBeer';
 
 function App() {
   const [beers, setBeers] = useState([])
@@ -16,16 +16,11 @@ function App() {
   useEffect(() => {
       axios.get('https://ih-beers-api2.herokuapp.com/beers')
         .then(response => {
-           setBeers(response.data.slice(0, 25))
+            setBeers(response.data.slice(0, 25))
+          
         })
         .catch(err => console.log(err))
-      return () => {
-        // this would happen when the component is unmounted
-      }
     }, [])
-
-
-
 
   return (
     <div className="App">

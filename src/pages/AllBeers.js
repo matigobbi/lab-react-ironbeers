@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
-import beerPic from "../src/assets/beer.png"
+import beerPic from "../assets/beer.png"
 
 export default function AllBeers(props) {
-// console.log(props)
+props.beers && console.log(props)
 
     return <>    
     <div className="navbar-home">
       <Link to="/"><img className="home-img"src={beerPic} alt=""/> </Link>
      </div>
-    {props.beers.map((beer) => {
+    
+    { props.beers.map((beer) => {
         return <p className="allbeers-container">
         <Link to={beer._id} ><img src={beer.image_url} className="beer-img" alt=""/> </Link>
           <div>

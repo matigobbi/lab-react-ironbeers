@@ -3,10 +3,11 @@
 }
 .allbeers-container{
   display: flex;
-  flex-direction:row;
+  flex-direction:col;
   justify-content: center;
   margin: 2% 25%;  
 }
+
 
 .beer-img{
   width: 50px;
